@@ -1,6 +1,6 @@
 
 import random
-def fair_dice():
+def main():
 #This function is written to see if the hypothetical die is fair or not.
      roll = int(input("Enter how many times you want to roll your die: "))
      count= 0
@@ -16,10 +16,10 @@ def fair_dice():
      e = results.count(5)
      f = results.count(6)
      chisquared = ((x-(roll/6))**2)/(roll/6) + ((y-(roll/6))**2)/(roll/6) + ((z-(roll/6))**2)/(roll/6) + ((d-(roll/6))**2)/(roll/6) + ((e-(roll/6))**2)/(roll/6) + ((f-(roll/6))**2)/(roll/6)
-     if chisquared <= 5:
+     if chisquared <= 11.07:
         print("Dice is fair.")
      else:
         print("Dice isn't fair.")
      print(chisquared)
      print(x, y, z, d, e, f)
-fair_dice()
+main()
